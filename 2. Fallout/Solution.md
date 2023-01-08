@@ -1,0 +1,1 @@
+1. Use wrong spelled fallout function to claim ownership : `contract.Fal1out()`
