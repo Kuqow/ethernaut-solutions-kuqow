@@ -12,7 +12,7 @@ Thus, if we call the delegateCall to change time it will change `timeZone1Librar
 
 ![](https://github.com/xWhiteOuroboros/ethernaut-solutions-xwhiteouroboros/blob/main/Pictures/preservation1.png)
 
-And if we change this value to another owned contract address, and if this contract has a setTime() function, it will be executed. Steps to do :
+If we change this value to another owned contract address, and if this contract has a setTime() function, it will be executed. Steps to do :
 
 1. Create a contract with the same storage structure as Preservation :
 
