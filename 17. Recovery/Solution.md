@@ -9,4 +9,5 @@ Our goal is to retrieve 0.001 eth from a lost contract. To do that we need to :
 ![](https://github.com/xWhiteOuroboros/ethernaut-solutions-xwhiteouroboros/blob/main/Pictures/recovery2.png)
 
 3. We call it and it's done
+
 ![](https://github.com/xWhiteOuroboros/ethernaut-solutions-xwhiteouroboros/blob/main/Pictures/recovery3.png)
