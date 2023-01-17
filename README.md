@@ -1,4 +1,4 @@
-# Ethernaut solutions by xWhiteOuroboros
+# Ethernaut solutions by Kuqow
 This repository contains all my solutions to the different **Ethernaut CTF challenges** !
 
 Ethernaut is a Web3/Solidity based wargame meant to be played in the Ethereum Virtual Machine. Each level is a smart contract that needs to be 'hacked'.

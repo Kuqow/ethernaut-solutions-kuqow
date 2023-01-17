@@ -7,13 +7,13 @@ To register as an entrant and succeed, we have to bypass 3 gates (again) :
 
 ### Gate 1
 
-![](https://github.com/xWhiteOuroboros/ethernaut-solutions-xwhiteouroboros/blob/main/Pictures/gatekeepertwo1.png)
+![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/gatekeepertwo1.png)
 
 Same as previous challenge, call the function from a contract.
 
 ### Gate 2
 
-![](https://github.com/xWhiteOuroboros/ethernaut-solutions-xwhiteouroboros/blob/main/Pictures/gatekeepertwo2.png)
+![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/gatekeepertwo2.png)
 
 Here we have one assembly code call : ``extcodesize(x)`` returns the size of the code at address x. In our case, we want to have the code size of our contract equals to zero, how is it possible ? We need to call it within the **constructor** ! 
 
@@ -21,7 +21,7 @@ At this point, it will have a (theoretical) address but no code yet in the chain
 
 ### Gate 3
 
-![](https://github.com/xWhiteOuroboros/ethernaut-solutions-xwhiteouroboros/blob/main/Pictures/gatekeepertwo3.png)
+![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/gatekeepertwo3.png)
 
 To pass this gate we need to calculate a precise `_gateKey` using XOR operations :
 
@@ -37,4 +37,4 @@ And the key equals to :
 
 We wrap all the calculations and call in the constructor to pass the challenge.
 
-![](https://github.com/xWhiteOuroboros/ethernaut-solutions-xwhiteouroboros/blob/main/Pictures/gatekeepertwo4.png)
+![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/gatekeepertwo4.png)

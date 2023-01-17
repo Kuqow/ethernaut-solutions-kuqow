@@ -36,7 +36,7 @@ So, our final runtime opcode is : ``602a60505260206050f3`` with a size of 10 byt
 
 Then we can simply use it within our contract using `assembly{}` structure. Since EVM stack size is 32 bytes, there is a prepadding of `32 bytes - 10 bytes (our opcode) = 22 bytes (0x16)`.
 
-![](https://github.com/xWhiteOuroboros/ethernaut-solutions-xwhiteouroboros/blob/main/Pictures/magicnumber.png)
+![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/magicnumber.png)
 
 Once deployed, we set the solver's address to our contract's address : `contract.setSolver("0xA")` and we submit the instance.
 

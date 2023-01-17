@@ -6,8 +6,8 @@ We will then a contract able to :
 - ``Send funds`` to our target
 - ``Reject incoming transfers`` to make the transfer fail : to do so, we add a minimum value to our ``receive()`` function :
 
-![](https://github.com/xWhiteOuroboros/ethernaut-solutions-xwhiteouroboros/blob/main/Pictures/king1.png)
+![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/king1.png)
 
 The main contract will then **fail to reclaim the kingship** when doing this :
 
-![](https://github.com/xWhiteOuroboros/ethernaut-solutions-xwhiteouroboros/blob/main/Pictures/king2.png)
+![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/king2.png)

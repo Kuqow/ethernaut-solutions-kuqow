@@ -3,7 +3,7 @@
 
 We want to transfer funds from our address, but we can't use the `transfer()` function because it is locked by the modifier `lockTokens` :
 
-![](https://github.com/xWhiteOuroboros/ethernaut-solutions-xwhiteouroboros/blob/main/Pictures/naughtcoin.png)
+![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/naughtcoin.png)
 
 BUT, this contract inherits from **ERC20.sol** functions, and there is another function available to transfer funds which is not covered by the modifier : `transferFrom(from,to,amount)` 
 

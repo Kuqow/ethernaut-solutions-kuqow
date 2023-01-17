@@ -1,4 +1,4 @@
-![](https://github.com/xWhiteOuroboros/ethernaut-solutions-xwhiteouroboros/blob/main/Pictures/force.png)
+![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/force.png)
 
 We want to make the balance of the contract greater than 0 but there are no functions to interact with.
 

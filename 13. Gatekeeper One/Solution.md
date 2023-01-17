@@ -2,7 +2,7 @@ To register as an entrant and succeed, we have to bypass 3 gates :
 
 ### Gate 1
 
-![](https://github.com/xWhiteOuroboros/ethernaut-solutions-xwhiteouroboros/blob/main/Pictures/gatekeeperone1.png)
+![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/gatekeeperone1.png)
 
 This one is easy, we just need to call the function through a contract, thus we will have : `msg.origin = contract addr` and `tx.origin = user addr`. 
 
@@ -12,28 +12,28 @@ This one is easy, we just need to call the function through a contract, thus we 
 
 ### Gate 2
 
-![](https://github.com/xWhiteOuroboros/ethernaut-solutions-xwhiteouroboros/blob/main/Pictures/gatekeeperone2.png)
+![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/gatekeeperone2.png)
 
 To pass this gate, we need to send a precise amount of gas : `gasleft() % 8191 == 0`.
 Every EVM operand costs gas, but we can't really guess what operations will happen and how much gas will it cost before arriving at this exact operation. 
 
 Thus, we decide to brute force using a `for` loop :
 
-![](https://github.com/xWhiteOuroboros/ethernaut-solutions-xwhiteouroboros/blob/main/Pictures/gatekeeperone3.png)
+![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/gatekeeperone3.png)
 
 We could also send one tx and **debug it** (using Remix IDE) to see how much gas has been spent that point.
 
 In our example we see the following gas used : `24829 gas` to validate the tx
 
-![](https://github.com/xWhiteOuroboros/ethernaut-solutions-xwhiteouroboros/blob/main/Pictures/gatekeeperone4.png)
+![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/gatekeeperone4.png)
 
 ### Gate 3 
 
 Reminder : 
 
-![](https://github.com/xWhiteOuroboros/ethernaut-solutions-xwhiteouroboros/blob/main/Pictures/gatekeeperone5.png)
+![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/gatekeeperone5.png)
 
-![](https://github.com/xWhiteOuroboros/ethernaut-solutions-xwhiteouroboros/blob/main/Pictures/gatekeeperone6.png)
+![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/gatekeeperone6.png)
 
 For this one, we need to find the perfect `bytes8 _gateKey` to send.
 
