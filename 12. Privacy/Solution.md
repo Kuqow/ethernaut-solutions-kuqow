@@ -8,7 +8,7 @@ To unlock the contract and win, we need to submit a `bytes16 key` corresponding 
 
 ![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/privacy2.png)
 
-We will use the same technique as in **8. Vault** with `web3.utils.getStorageAt(addr)` , but we first need to know where to find our key :
+We will use the same technique as in **8. Vault** with `web3.utils.getStorageAt(addr,pos)` , but we first need to know where to find our key :
 
 ![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/privacy3.png)
 
