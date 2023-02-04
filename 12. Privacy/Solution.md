@@ -1,3 +1,5 @@
+# Solution to challenge 12 : Privacy
+
 Multiple items that need less than 32 bytes are packed into a single storage slot if possible (https://docs.soliditylang.org/en/v0.4.24/miscellaneous.html)
 
 ![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/privacy1.png)
@@ -8,7 +10,7 @@ To unlock the contract and win, we need to submit a `bytes16 key` corresponding 
 
 ![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/privacy2.png)
 
-We will use the same technique as in **8. Vault** with `web3.utils.getStorageAt(addr,pos)` , but we first need to know where to find our key :
+We will use the same technique as in **8. Vault** with `web3.eth.getStorageAt(addr,pos)` , but we first need to know where to find our key :
 
 ![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/privacy3.png)
 

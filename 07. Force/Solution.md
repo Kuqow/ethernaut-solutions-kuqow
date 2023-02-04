@@ -1,3 +1,5 @@
+# Solution to challenge 7 : Force
+
 ![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/force.png)
 
 We want to make the balance of the contract greater than 0 but there are no functions to interact with.

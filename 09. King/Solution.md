@@ -1,3 +1,5 @@
+# Solution to challenge 9 : King
+
 Whoever sends it an amount of ether that is larger than the current prize becomes the new king. On such an event, the overthrown king gets paid the new prize. 
 
 We want to prevent the owner from reclaiming the kingship, we will make his **transaction fail** when he will try to `king.transfer(msg.value);`
