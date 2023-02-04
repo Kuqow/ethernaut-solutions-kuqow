@@ -1,3 +1,5 @@
+# Solution to challenge 18 : MagicNumber
+
 This one is pretty tricky if you are not used to assembly code and can be achieved in at least **two different ways**.
 
 We want to create a smart contract with a function `whatIsTheMeaningOfLife()` that returns the number 42. This contract code must be very small and contain **42 opcodes at least**, so we have to use assembly code to build it.
