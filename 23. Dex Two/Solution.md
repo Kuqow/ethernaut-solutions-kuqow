@@ -26,4 +26,4 @@ Here are the steps to achieve this exploit :
 
 ![](https://github.com/Kuqow/ethernaut-solutions-Kuqow/blob/main/Pictures/DEXtwo5.png)
 
-6. **Repeat for token 2** and **submit your instance** ! 
+6. **Repeat for ``token2`` and **submit your instance** ! 
