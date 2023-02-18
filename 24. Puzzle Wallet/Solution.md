@@ -16,7 +16,7 @@ This means that if we change the value of `pendingAdmin` in ``PuzzleProxy`` cont
 
 So let's think about our objective : change `admin` value in `PuzzleProxy` to player's address, there is no way to change it through ``PuzzleProxy``, so let's aim at changing `maxBalance` value which shares the "same storage slot".
 
-There are 2 ways to alter this value :
+### There are 2 ways to alter this value :
 
 1. `init()` function : not exploitable because it **has already been initialized**
 2. `setMaxBalance()` function : exploitable but we need the contract's balance to be equal to zero
@@ -39,7 +39,7 @@ This function allows us to execute multiple functions in 1 transaction. Thus, we
 
 But we can bypass this protection if we **"pack"** one deposit inside another `multicall`
 
-Let's sum up all the actions required together, we will only used web3 js commands :
+## Let's sum up all the actions required together, we will only used web3 js commands :
 
 ### 1. Claim ownership of `PuzzleWallet` contract by changing `pendingAdmin` value to the player's address
 
